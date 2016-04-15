@@ -1,0 +1,11 @@
+name: CrateLog
+author: sistem21
+version: 1.0
+main: me.sistem21.cratelog.CrateLog
+
+commands:
+  cratelog:
+  
+permissions:
+  cratelog.log:
+    default: op

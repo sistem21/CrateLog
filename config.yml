@@ -1,0 +1,14 @@
+##########################
+#                        #
+#  +------------------+  #
+#  |     CrateLog     |  #
+#  +------------------+  #
+#                        #
+##########################
+
+#Choose the format to use when you log something!
+#You can use: 
+#{message} to get the message to log
+#{date} to get the date of log (ex.: 15/04/2016)
+#{time} to get the time of log (ex.: 21:45:30)
+log-format: "[{date} {time}] {message}"
