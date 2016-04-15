@@ -19,7 +19,7 @@ public class CrateLog extends JavaPlugin {
 		if (cmd.getName().equalsIgnoreCase("cratelog")) {
 			if (cs.hasPermission("cratelog.log")) {
 				if (args.length < 1) {
-					cs.sendMessage("§cWhat do you want to log? Use §7/cratelog <args>");
+					cs.sendMessage("Â§cWhat do you want to log? Use Â§7/cratelog <args>");
 					return false;
 				}
 				
@@ -37,11 +37,12 @@ public class CrateLog extends JavaPlugin {
 				format = format.replaceAll("\\{date\\}", date.format(now));
 				format = format.replaceAll("\\{time\\}", time.format(now));
 				log(format);
-				cs.sendMessage("§aYour message was logged!");
+				cs.sendMessage("Â§aYour message was logged!");
 				return true;
 			}
 			
-			cs.sendMessage("§cYou don't have enough permissions to execute that command!");
+			cs.sendMessage("Â§cYou don't have enough permissions to execute that command!");
+			return false;
 		}
 		return false;
 	}
@@ -60,7 +61,7 @@ public class CrateLog extends JavaPlugin {
 			pw.flush();
 			pw.close();
 		} catch (IOException e) {
-			getLogger().warning("§cThere was an error during logging!");
+			getLogger().warning("Â§cThere was an error during logging!");
 			e.printStackTrace();
 		}
 
